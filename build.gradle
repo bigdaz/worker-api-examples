@@ -1,0 +1,17 @@
+task X {
+  doLast {
+    sleep 5000
+  }
+}
+
+task A(type: TaskA)
+task B(type: TaskB)
+task C(type: TaskC) {
+    doLast {
+      submitWork("c1")
+    }
+    doLast {
+      submitWork("c2")
+    }
+}
+task D(type: TaskD)
